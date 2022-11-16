@@ -1,7 +1,6 @@
 .sidebar {
-  background: var(--white);
   border-radius: 8px;
-  box-shadow: 0 0 0.3em grey;
+  box-shadow: 0 0 0.3em var(--grey);
   overflow: hidden;
 }
 
@@ -20,24 +19,20 @@
 
 .profile strong {
   margin-top: 1rem;
-  color: var(--blue-300);
   line-height: 1.6;
 }
 
 .profile span {
   font-size: 0.875rem;
-  color: var(--blue-300);
   line-height: 1.6;
 }
 
 .sidebar footer {
-  border-top: 2px solid var(--grey-100);
   margin-top: 1.5rem;
   padding: 1.5rem 2rem 2rem;
 }
 
 .sidebar footer a {
-  background: var(--blue-100);
   color: var(--white);
   border-radius: 8px;
   height: 50px;
@@ -68,17 +63,21 @@
   width: calc(3rem + 12px);
   height: calc(3rem + 12px);
   border-radius: 30px;
-  border: 2px solid var(--grey-100);
-  box-shadow: 0 0 0.3em grey;
+  box-shadow: 0 0 0.3em var(--grey);
 }
 
 .buttonStyle {
-  color: white;
+  color: var(--white);
   font-size: 20px;
   border: 30px;
-  background-color: orange;
+  background-color: var(--orange);
   border-radius: 7px;
   width: 100%;
   height: 50px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.buttonStyle:hover{
+  opacity: 0.7;
 }

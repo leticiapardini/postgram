@@ -8,6 +8,5 @@
   width: calc(3rem + 12px);
   height: calc(3rem + 12px);
   border-radius: 30px;
-  border: 2px solid var(--grey-100);
-  box-shadow: 0 0 0.3em grey;
+  box-shadow: 0 0 0.3em var(--grey);
 }

@@ -18,13 +18,14 @@
 .tree {
   margin-left: 45%;
   margin-bottom: 7%;
-  text-decoration: underline orange;
+  text-decoration: underline var(--orange);
 }
 
 .form {
-  border: 3px solid orange;
+  border: 3px solid var(--orange);
   width: 100%;
   border-radius: 5px;
+  box-shadow: 0 0 0.4em var(--orange);
 }
 
 .form input {
@@ -32,7 +33,7 @@
   height: 40px;
   margin: 5% 0 0% 10%;
   background-color: transparent;
-  border: 2px solid orange;
+  border: 2px solid var(--orange);
   border-radius: 5px;
 }
 
@@ -58,19 +59,19 @@
   margin-top: 8%;
   margin-bottom: 5%;
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.5s;
 }
 
 .button:hover{
-    color: orange;
-    border: 2px solid orange;    
+    color: var(--orange);
+    border: 2px solid var(--orange);    
 }
 
 .erro{
-  color: red;
+  color: var(--red);
   font-weight: bold;
   margin-left: 10%;
 }
@@ -81,7 +82,7 @@
 }
 
 .link {
-  color: orange;
+  color: var(--orange);
   font-size: 0.9rem;
 }
 
@@ -99,9 +100,6 @@
     margin: 5%;
   }
 
-  /* .form {
-    margin-top: 50%;
-  } */
 }
 
 @media (max-width: 950px) {

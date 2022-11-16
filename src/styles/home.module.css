@@ -35,23 +35,23 @@
   width: 100%;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--white);
 }
 
 .commentForm > strong {
   line-height: 1.6;
-  color: orange;
+  color: var(--orange);
 }
 
 .commentForm textarea {
   width: 100%;
-  background: white;
+  background: var(--white);
   border: 0;
   resize: none;
   height: 6rem;
   padding: 1rem;
   border-radius: 8px;
-  color: orange;
+  color: var(--orange);
   line-height: 1.4;
   margin-top: 1rem;
 }
@@ -71,8 +71,8 @@
   margin-top: 1rem;
   border-radius: 8px;
   border: 0;
-  background: orange;
-  color: white;
+  background: var(--orange);
+  color: var(--white);
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.1s;
@@ -83,14 +83,14 @@
 }
 
 .commentForm button[type=submit]:disabled {
-  background: grey;
+  background: var(--grey);
   opacity: 0.3;
 }
 
 .post {
-  background: white;
+  background: var(--white);
   border-radius: 8px;
-  box-shadow: 0 0 0.3em white;
+  box-shadow: 0 0 0.3em var(--white);
   padding: 2.5rem;
 }
 
@@ -98,7 +98,7 @@
   width: 100%;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid orange;
+  border-top: 1px solid var(--orange);
 }
 
 .container {

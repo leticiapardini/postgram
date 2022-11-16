@@ -1,6 +1,6 @@
 .post {
   border-radius: 8px;
-  box-shadow: 0 0 0.3em grey;
+  box-shadow: 0 0 0.3em var(--grey);
   padding: 2.5rem;
   margin-bottom: 20px;
 }
@@ -11,7 +11,7 @@
 
 .content {
   line-height: 1.6;
-  color:white;
+  color: var(--white);
   margin-top: 1.5rem;
 }
 
@@ -27,12 +27,12 @@
 
 .content a {
   font-weight: bold;
-  color: white;
+  color: var(--white);
   text-decoration: none;
 }
 
 .content a:hover {
-  color: white;
+  color: var(--white);
 }
 
 .post > header {
@@ -43,7 +43,7 @@
 
 .post > header time {
   font-size: 0.875rem;
-  color: white;
+  color: var(--white);
 }
 
 .author {
@@ -54,22 +54,22 @@
 
 .authorInfo strong {
   display: block;
-  color: orange;
+  color: var(--orange);
   line-height: 1.6;
 }
 
 .authorInfo span {
   display: block;
   font-size: 0.875rem;
-  color: orange;
+  color: var(--orange);
   line-height: 1.6;
 }
 
 .iconDelete {
   background-color: transparent;
-  border: 1px solid orange;
+  border: 1px solid var(--orange);
   font-size: 1.2rem;
-  color: orange;
+  color: var(--orange);
   font-weight: bold;
   margin-right: 10px;
   margin-top: 20px;
@@ -81,9 +81,9 @@
 
 .iconEdit {
   background-color: transparent;
-  border: 1px solid orange;
+  border: 1px solid var(--orange);
   font-size: 1.2rem;
-  color: orange;
+  color: var(--orange);
   font-weight: bold;
   margin-top: 20px;
   border-radius: 5px;
@@ -93,17 +93,17 @@
 }
 
 .iconDelete:hover{
-  color: white;
-  border: 1px solid white;
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
 .iconEdit:hover{
-  color: white;
-  border: 1px solid white;
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
 .error {
-  color: red;
+  color: var(--red);
   margin-top: 10px;
 }
 
@@ -111,9 +111,9 @@
   width: 100%;
   background: transparent;
   height: 90px;
-  border: 3px solid orange;
+  border: 3px solid var(--orange);
   margin: 10px 0 10px 0;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
   padding: 0;
 }
@@ -128,14 +128,14 @@
   margin-top: 20px;
   background-color: transparent;
   border-radius: 5px;
-  color: white;
-  border: 2px solid orange;
+  color: var(--white);
+  border: 2px solid var(--orange);
   cursor: pointer;
   transition: all 0.5s;
 }
 
 .buttonEdit:hover{
-  border: 2px solid white;
+  border: 2px solid var(--white);
 }
 
 
@@ -149,6 +149,3 @@
   }
 }
 
-@media (max-width: 950px) {
-
-}
