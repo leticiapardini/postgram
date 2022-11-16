@@ -1,0 +1,139 @@
+.post {
+  border-radius: 8px;
+  box-shadow: 0 0 0.3em grey;
+  padding: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+.content {
+  line-height: 1.6;
+  color:white;
+  margin-top: 1.5rem;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: white;
+}
+
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > header time {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo strong {
+  display: block;
+  color: orange;
+  line-height: 1.6;
+}
+
+.authorInfo span {
+  display: block;
+  font-size: 0.875rem;
+  color: orange;
+  line-height: 1.6;
+}
+
+.iconDelete {
+  background-color: transparent;
+  border: 1px solid orange;
+  font-size: 1.2rem;
+  color: orange;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.iconEdit {
+  background-color: transparent;
+  border: 1px solid orange;
+  font-size: 1.2rem;
+  color: orange;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.iconDelete:hover{
+  color: white;
+  border: 1px solid white;
+}
+
+.iconEdit:hover{
+  color: white;
+  border: 1px solid white;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.inputEdit {
+  width: 100%;
+  background: transparent;
+  height: 90px;
+  border: 3px solid orange;
+  margin: 10px 0 10px 0;
+  color: white;
+  font-size: 1rem;
+  padding: 0;
+}
+
+.inputEdit::placeholder {
+  padding: 0;
+}
+
+.buttonEdit {
+  width: 15%;
+  height: 30px;
+  margin-top: 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid orange;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.buttonEdit:hover{
+  border: 2px solid white;
+}
