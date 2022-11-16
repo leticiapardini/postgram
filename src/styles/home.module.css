@@ -8,15 +8,28 @@
   align-items: flex-start;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 550px) {
+
   html {
     font-size: 87.5%;
   }
 
   .wrapper {
     grid-template-columns: 1fr;
+    display: revert;
   }
+
+ .commentForm{
+  margin-bottom: 10%;
+ }
+
+ .commentForm textarea {
+  width: 80% !important;
 }
+}
+
+
 
 .commentForm {
   width: 100%;

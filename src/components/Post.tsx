@@ -3,19 +3,9 @@ import styles from "../styles/post.module.css";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { formatRelative } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { getUsers } from "../pages/home";
 import UserServices from "../services/services";
-import { Modal, Button } from "antd";
+import { getPost, getUsers } from "../types/interfaces";
 
-interface getPosts {
-  id: number;
-  content: string;
-  date: Date;
-  userId: number;
-  name: string;
-  user: getUsers[];
-  getAllPosts: () => Promise<void>;
-}
 
 const userService = new UserServices();
 export const Post = ({
@@ -26,7 +16,7 @@ export const Post = ({
   name,
   user,
   getAllPosts,
-}: getPosts) => {
+}: getPost) => {
   const [error, setErro] = useState("");
   const [contentEdit, setContentEdit] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,18 +38,22 @@ export const Post = ({
   };
 
   const handleEdit = async () => {
-   try {
-    setIsModalOpen(false);
-    const response = await userService.editPost({id, userId, user : user[0].id, 
-      dados: {content: contentEdit, date: newDate}})
-      if(response.status === 200){
-        getAllPosts()
+    try {
+      setIsModalOpen(false);
+      const response = await userService.editPost({
+        id,
+        userId,
+        user: user[0].id,
+        dados: { content: contentEdit, date: newDate },
+      });
+      if (response.status === 200) {
+        getAllPosts();
       }
-   } catch (error) {
-    console.log(error)
-   }
+    } catch (error: any) {
+      setErro(error.response.data.message);
+    }
   };
-  console.log(id, userId)
+
   return (
     <article className={styles.post}>
       <header>
@@ -87,7 +81,7 @@ export const Post = ({
           <DeleteOutlined />
         </button>
         <button
-          onClick={() => setIsModalOpen(true)}
+          onClick={() => setIsModalOpen(!isModalOpen)}
           className={styles.iconEdit}
         >
           <EditOutlined />

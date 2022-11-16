@@ -3,8 +3,6 @@ import { RoutesApp } from "./pages/routes";
 
 
 function App() {
-  const date = new Date()
-  console.log(date)
   return (
   <RoutesApp/>
   );

@@ -24,13 +24,12 @@
 .form {
   border: 3px solid orange;
   width: 100%;
-  height: 70%;
   border-radius: 5px;
 }
 
 .form input {
   width: 80%;
-  height: 8%;
+  height: 40px;
   margin: 5% 0 0% 10%;
   background-color: transparent;
   border: 2px solid orange;
@@ -38,7 +37,7 @@
 }
 
 .form input:last-child {
-margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 .form input::placeholder {
@@ -48,15 +47,16 @@ margin-bottom: 10%;
 
 .titleRegister{
   font-weight: bold;
-  font-size: 1.5rem;
-  margin-left: 40%;
+  font-size: 2rem;
+  margin-left: 42%;
 }
 
 .button {
   width: 40%;
-  height: 8%;
+  height: 30px;
   margin-left: 30%;
-  margin-top: 20%;
+  margin-top: 8%;
+  margin-bottom: 5%;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 10px;
@@ -83,4 +83,46 @@ margin-bottom: 10%;
 .link {
   color: orange;
   font-size: 0.9rem;
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .titleRegister{
+    font-size: 1.2rem;
+  }
+
+  .container{
+    width: 90%;
+    margin: 5%;
+  }
+
+  /* .form {
+    margin-top: 50%;
+  } */
+}
+
+@media (max-width: 950px) {
+  .title {
+    margin-top: 10%;
+  }
+
+  .titleRegister{
+    font-size: 1.5rem;
+  }
+
+  .container{
+    width: 90%;
+    margin: 5%;
+  }
+
+  .form {
+    margin-top: 20%;
+  }
+
+  .form input {
+    height: 50px;
+  }
 }

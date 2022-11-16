@@ -1,26 +1,10 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { Post } from "../components/Post";
 import { Sidebar } from "../components/SideBar";
 import styles from "../styles/home.module.css";
 import UserServices from "../services/services";
+import { getPosts, getUsers } from "../types/interfaces";
 
- export interface user {
-  email: string;
-  id: number;
-  name: string;
-}
-export interface getPosts {
-  id: number;
-  content: string;
-  date: Date;
-  user: user;
-}
-
-export interface getUsers {
-  id: number;
-  name: string;
-  email: string;
-}
 
 const useService = new UserServices();
 
@@ -32,11 +16,11 @@ export const Home = () => {
 
   const user = localStorage.getItem("user");
   const date = new Date().toISOString();
-  const userActivo = users.filter((id) => id.email === user);
-  const moderadorPost = posts.filter((post) => post.user.email === user);
+  const userActive = users.filter((id) => id.email === user);
   let userId = 0;
-  if (userActivo.length > 0) {
-    userId = userActivo[0].id;
+
+  if (userActive.length > 0) {
+    userId = userActive[0].id;
   }
 
   const getAllPosts = async () => {
@@ -52,7 +36,7 @@ export const Home = () => {
     getAllUsers();
     getAllPosts();
   }, []);
-  console.log(moderadorPost)
+ 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
@@ -68,7 +52,7 @@ export const Home = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Sidebar />
+      <Sidebar user={userActive} />
       <main>
         <div className={styles.Post}>
           <form onSubmit={handleSubmit} className={styles.commentForm}>
@@ -88,12 +72,12 @@ export const Home = () => {
         </div>
       </main>
       <div className={styles.container}>
-        {posts.map((post) => (
+        {posts.length > 0 && posts.map((post) => (
           <div key={post.id}>
             <Post
               getAllPosts={getAllPosts}
               id={post.id}
-              user={userActivo}
+              user={userActive}
               content={post.content}
               date={post.date}
               userId={post.user.id}

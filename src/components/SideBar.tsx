@@ -1,18 +1,18 @@
-import React, { useContext, useState } from "react";
 import styles from "../styles/sidebar.module.css";
 import UserServices from "../services/services";
 import { useNavigate } from "react-router-dom";
+import { userProps } from "../types/interfaces";
 
 const userService = new UserServices();
 
-export function Sidebar() {
+export function Sidebar({ user }: userProps) {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-  
-  const logaut = () => {
+  const logout = () => {
     userService.logout();
-    navigate('/login')
-  }
+    navigate("/login");
+  };
+
   return (
     <>
       <aside className={styles.sidebar}>
@@ -26,12 +26,16 @@ export function Sidebar() {
             className={styles.avatarWithBorder}
             src="https://lead.umn.edu/sites/lead.umn.edu/files/2020-04/default-user-icon.jpg"
           />
-          <strong>Leticia Pardini</strong>
+          <strong>
+            {user.length > 0 ? user[0].name.toUpperCase() : "name"}
+          </strong>
         </div>
         <footer>
-        <div>
-          <button onClick={logaut} className={styles.buttonStyle}>Sair</button>
-        </div>
+          <div>
+            <button onClick={logout} className={styles.buttonStyle}>
+              Sair
+            </button>
+          </div>
         </footer>
       </aside>
     </>

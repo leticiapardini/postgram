@@ -137,3 +137,18 @@
 .buttonEdit:hover{
   border: 2px solid white;
 }
+
+
+@media (max-width: 450px) {
+  .buttonEdit {
+    width: 30%;
+  }
+
+  .post > header {
+    display: block;
+  }
+}
+
+@media (max-width: 950px) {
+
+}
