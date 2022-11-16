@@ -5,7 +5,6 @@ import styles from "../styles/home.module.css";
 import UserServices from "../services/services";
 import { getPosts, getUsers } from "../types/interfaces";
 
-
 const useService = new UserServices();
 
 export const Home = () => {
@@ -36,7 +35,7 @@ export const Home = () => {
     getAllUsers();
     getAllPosts();
   }, []);
- 
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
@@ -72,19 +71,25 @@ export const Home = () => {
         </div>
       </main>
       <div className={styles.container}>
-        {posts.length > 0 && posts.map((post) => (
-          <div key={post.id}>
-            <Post
-              getAllPosts={getAllPosts}
-              id={post.id}
-              user={userActive}
-              content={post.content}
-              date={post.date}
-              userId={post.user.id}
-              name={post.user.name}
-            />
-          </div>
-        ))}
+        {posts.length > 0 &&
+          posts
+            .sort((a, b) => {
+              return a.id - b.id;
+            })
+            .reverse()
+            .map((post) => (
+              <div key={post.id}>
+                <Post
+                  getAllPosts={getAllPosts}
+                  id={post.id}
+                  user={userActive}
+                  content={post.content}
+                  date={post.date}
+                  userId={post.user.id}
+                  name={post.user.name}
+                />
+              </div>
+            ))}
       </div>
     </div>
   );

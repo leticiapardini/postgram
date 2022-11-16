@@ -17,6 +17,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 # 👷 Como rodar
 
 ```bash
+
+# Antes de rodar o frontend vá até o repositório do backend e faça o passo a passo indicado no repositório,  o backend necessita estar rodando para o frontend ser executado
+
+repositório - https://github.com/leticiapardini/crud_api_rest
+
 # Clonar os seguintes repositórios
 git clone https://github.com/leticiapardini/postgram
 
