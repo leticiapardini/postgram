@@ -76,6 +76,15 @@
   margin-left: 25%;
 }
 
+.link {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.link:hover{
+  color: var(--white);
+}
+
 
 
 @media (max-width: 450px) {

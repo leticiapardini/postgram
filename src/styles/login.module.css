@@ -77,13 +77,16 @@
 }
 
 .login {
-  margin-top: 3%;
-  margin-left: 25%;
+  margin-left: 5%;
 }
 
 .link {
   color: var(--orange);
-  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--white);
 }
 
 @media (max-width: 450px) {

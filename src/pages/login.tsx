@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserServices from "../services/services";
 import styles from "../styles/login.module.css";
 
@@ -51,6 +51,12 @@ export const Login = () => {
         <button className={styles.button} type="submit">
           Login
         </button>
+        <p className={styles.login}>
+          <Link to={"/"} className={styles.link}>
+            {" "}
+            Clique aqui para ir para o Cadastro
+          </Link>
+        </p>
       </form>
     </div>
   );
